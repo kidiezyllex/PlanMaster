@@ -3,9 +3,8 @@
 import React, { useState } from 'react';
 import { MenuProps } from 'antd';
 import { useNavigate } from 'react-router-dom';
-import { MenuUnfoldOutlined, MenuFoldOutlined } from '@ant-design/icons';
+import { IconMenu2, IconFold } from '@tabler/icons-react';
 import { Layout, Menu, theme, Button } from 'antd';
-// import { DefaultMenuList } from './menu/DefaultMenuList';
 
 const { Sider } = Layout;
 
@@ -62,7 +61,7 @@ const Sidebar: React.FC<MenuProps> = () => {
         />
         <div className="absolute bottom-0 w-full p-2">
           <Button className="w-full" type="default" onClick={toggleCollapsed}>
-            {collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
+            {collapsed ? <IconMenu2 /> : <IconFold />}
           </Button>
         </div>
       </Sider>

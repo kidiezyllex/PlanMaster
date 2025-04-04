@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Breadcrumb } from 'antd'; // Replace with your actual import
-import { HomeOutlined, SearchOutlined } from '@ant-design/icons'; // Replace with your actual icons
+import { Breadcrumb } from 'antd';
+import { IconHome, IconSearch } from '@tabler/icons-react';
 
 const CustomBreadcrumb = () => {
   const location = useLocation();
@@ -12,7 +12,7 @@ const CustomBreadcrumb = () => {
     const items = [
       {
         href: '/',
-        title: <HomeOutlined />,
+        title: <IconHome />,
       },
     ];
 
@@ -27,7 +27,7 @@ const CustomBreadcrumb = () => {
             href: '',
             title: (
               <>
-                <SearchOutlined />
+                <IconSearch />
                 <span>Investigate by address</span>
               </>
             ),
@@ -37,7 +37,7 @@ const CustomBreadcrumb = () => {
             href: '',
             title: (
               <>
-                <SearchOutlined />
+                <IconSearch />
                 <span>Investigate by transaction hash</span>
               </>
             ),
@@ -48,7 +48,7 @@ const CustomBreadcrumb = () => {
           href: isLast ? to : '',
           title: isLast ? (
             <>
-              <SearchOutlined />
+              <IconSearch />
               <span>{value}</span>
             </>
           ) : (
