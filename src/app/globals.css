@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+
+    --primary: #FCAF17;
+    --primary-foreground: #131921;
+
+    --secondary: #232F3E;
+    --secondary-foreground: #ffffff;
+
+    --destructive: #ef4444;
+    --destructive-foreground: #ffffff;
+
+    --muted: #f1f5f9;
+    --muted-foreground: #64748b;
+
+    --accent: #f1f5f9;
+    --accent-foreground: #0f172a;
+
+    --popover: #ffffff;
+    --popover-foreground: #0f172a;
+
+    --card: #ffffff;
+    --card-foreground: #0f172a;
+
+    /* Toast colors */
+    --toast-success: #10b981;
+    --toast-error: #ef4444;
+    --toast-warning: #f59e0b;
+    --toast-info: #3b82f6;
+  }
+
+  .dark {
+    --radius: 0.5rem;
+
+    --primary: #FCAF17;
+    --primary-foreground: #131921;
+
+    --secondary: #232F3E;
+    --secondary-foreground: #ffffff;
+
+    --destructive: #ef4444;
+    --destructive-foreground: #ffffff;
+
+    --muted: #1e293b;
+    --muted-foreground: #94a3b8;
+
+    --accent: #1e293b;
+    --accent-foreground: #f8fafc;
+
+    --popover: #0f172a;
+    --popover-foreground: #f8fafc;
+
+    --card: #0f172a;
+    --card-foreground: #f8fafc;
+
+    /* Toast colors */
+    --toast-success: #10b981;
+    --toast-error: #ef4444;
+    --toast-warning: #f59e0b;
+    --toast-info: #3b82f6;
+  }
+}
+
+/* Custom Sonner Styles */
+[data-sonner-toast] {
+  border-radius: var(--radius);
+}
+
+[data-sonner-toast][data-type="success"] [data-icon] {
+  color: var(--toast-success);
+  background-color: rgba(16, 185, 129, 0.1);
+  border-radius: 50%;
+  padding: 4px;
+}
+
+[data-sonner-toast][data-type="error"] [data-icon] {
+  color: var(--toast-error);
+  background-color: rgba(239, 68, 68, 0.1);
+  border-radius: 50%;
+  padding: 4px;
+}
+
+[data-sonner-toast][data-type="warning"] [data-icon] {
+  color: var(--toast-warning);
+  background-color: rgba(245, 158, 11, 0.1);
+  border-radius: 50%;
+  padding: 4px;
+}
+
+[data-sonner-toast][data-type="info"] [data-icon] {
+  color: var(--toast-info);
+  background-color: rgba(59, 130, 246, 0.1);
+  border-radius: 50%;
+  padding: 4px;
+}
