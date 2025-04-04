@@ -2,7 +2,6 @@
 
 import React, { useState } from 'react';
 import { MenuProps } from 'antd';
-import { useNavigate } from 'react-router-dom';
 import { IconMenu2, IconFold } from '@tabler/icons-react';
 import { Layout, Menu, theme, Button } from 'antd';
 
@@ -10,7 +9,6 @@ const { Sider } = Layout;
 
 const Sidebar: React.FC<MenuProps> = () => {
   const [collapsed, setCollapsed] = useState(false);
-  const navigate = useNavigate();
 
   const toggleCollapsed = () => {
     console.log('toggle collapsed');
@@ -23,7 +21,7 @@ const Sidebar: React.FC<MenuProps> = () => {
 
   const onClick: MenuProps['onClick'] = e => {
     console.log('click ', e);
-    navigate(`/${e.key}`);
+    // navigate(`/${e.key}`);
   };
 
   const siderStyle: React.CSSProperties = {

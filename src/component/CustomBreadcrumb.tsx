@@ -1,10 +1,8 @@
 import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
 import { Breadcrumb } from 'antd';
 import { IconHome, IconSearch } from '@tabler/icons-react';
 
 const CustomBreadcrumb = () => {
-  const location = useLocation();
 
   const generateBreadcrumbItems = () => {
     const pathnames = location.pathname.split('/').filter(x => x);
